@@ -1,0 +1,493 @@
+*{
+    margin: 0;
+    padding:0;
+    font-family: 'poppins', sans-serif;
+    box-sizing: border-box;
+}
+body {
+    background-color:#080808 ;
+    color:  #fff;
+}
+nav{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 80px;
+    background-color:white;
+    box-shadow: 0 5px 15px rgba(0,0,0,0);
+    z-index: 999;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+nav ul li {
+    display: inline-block;
+    list-style: none;
+    margin:  30px;
+}
+nav ul li a {
+    color:darkgreen;
+    text-decoration: none;
+    font-size: 17px;
+    position: relative;
+}
+nav .logo{
+    width: 100px;
+    border-radius: 50%;
+    /* margin-top: 10px; */
+}
+nav .logo img{
+    width: 100%;
+    margin: 15px 0 5px 25px;
+    box-shadow:5px 5px 15px darkred;
+    transition: box-shadow 0.2s ease;
+}
+nav img:hover{
+    box-shadow: none;
+}
+nav ul li a::after{
+    content: ' ';
+    width: 0;
+    height: 2px;
+    background-color:black;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+}
+nav ul li a:hover::after{
+    width: 100%;
+}
+#header-text{
+    margin-top: 25%;
+    font-size: 10px;
+    padding: 45px 5%;
+
+}
+#header-text p{
+    color:black;
+}
+#header-text h1{
+    font-size: 60px;
+}
+#header-text h1 span {
+    color: #ff0062;
+}
+
+/*---------------------------------about----------------------------------*/
+
+#about
+{
+    padding: 100px;
+    color:white;
+}
+.row{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.about-col-1 {
+    margin-top: 180px;
+    flex-basis: 30%;
+}
+.about-col-1 img{
+    width: 60%;
+    border-radius: none;
+}
+.about-col-1 img{
+    box-shadow: 3px 3px 10px aqua;
+}
+.about-col-1 img:hover{
+    box-shadow: none;
+}
+.about-col-2{
+    margin-top: 100px;
+    flex-basis: 70%;
+}
+.about-col-2 p{
+    line-height: 1.3;
+    font-family:Open sans-serif;
+    font-size: 20px;
+    text-align: justify;
+    
+}
+.sub-title{
+    font-size: 60px;
+    font-weight: 600;
+    color: #ff0062;
+}
+.tab-titles{
+    font-family:Open sans-serif;
+    display: flex;
+    margin: 10px 0 20px;
+    color: aqua
+}
+.tab-links.active-link::after:hover{
+    color:#ff0062
+}
+.tab-links{
+    font-family:Open sans-serif;
+    margin-right: 20%;
+    font-size: 18px;
+    font-weight: 500;
+    cursor:pointer;
+    position: relative;
+
+}
+.tab-links::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: white;
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    transition: 0.5s;
+}
+
+ .tab-links.active-link::after{
+    width: 50%;
+    color: blue;
+}
+.tab-contents ul li span.head{
+    color: bisque;
+    font-family:Open sans-serif;
+    font-size: 18px;
+    padding-top: 20px;
+}
+.tab-contents ul li span.CGPA{
+    color: rgb(241, 255, 47);
+    font-size: 20px;
+    font-family:Open sans-serif;
+}
+.tab-contents{
+    display: none;
+}
+.tab-contents.Active-tab{
+    display: block;
+    font-family:Open sans-serif;
+    line-height: 1.5;
+}
+.tab-contents ul li head{
+    color: aqua;
+}
+#educ:hover, #skill:hover, #proj:hover, #cert:hover{
+    text-shadow: 10px 10px 35px blue;
+}
+.pagination {
+    text-align: center;
+  }
+  
+  .prev-button,
+  .next-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #0074cc;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin: 50px;
+    cursor: pointer;
+  }
+  
+  .prev-button:hover,
+  .next-button:hover {
+    background-color:#0055a0 ;
+  }
+  #skil1
+  {
+    display: inline-block;
+    padding: 10px 10px;
+    background-color:blueviolet;
+    text-decoration: none;
+    border-radius: 3px;
+    margin-top:20px;
+
+  }
+  #skil2
+  {
+    display: inline-block;
+    padding: 10px 10px;
+    background-color:blueviolet;
+    text-decoration: none;
+    border-radius: 3px;
+    margin-top:20px;
+
+  }
+  #skil3
+  {
+    display: inline-block;
+    padding: 10px 10px;
+    background-color:blueviolet;
+    text-decoration: none;
+    border-radius: 3px;
+    margin-top:20px;
+  }
+  .skil3:hover{
+    color: #ff004f;
+  }
+  
+/*-------------------------------ALL LINKS---------------------------------- */
+#zero {
+    color: aqua;
+}
+#zero:hover{
+    color: #ff004f;
+}
+/*-------------------------------- Certificates ------------------------------ */
+#Intern {
+    text-align: center;
+    padding:0 105px;
+    margin-bottom: 50px;
+}
+#Intern img{
+    width: 60%;
+    margin: 20px;
+    box-shadow: 5px 5px 15px black;
+}
+
+/* #three{
+
+    padding: 250px 250px;
+    margin-bottom: 150px;
+    color: aqua
+} */
+/* #three:hover{
+    
+    color: red;
+} */
+#minihead{
+    color: greenyellow;
+    padding: 10 0; 
+} 
+    #majorheaad{
+    color: greenyellow;
+    margin: 10px 0;
+}
+
+/*------------------------------------------contact-------------------------*/
+.contact-left{
+    padding: 200px 250px;
+}
+.contact-right{
+    margin-top: 180px;
+    margin-right: 180px;
+}
+.contact-left h1{
+    color: #ff004f;
+}
+.contact-left p{
+    margin-top: 30px 100px;
+}
+.contact-left p i{
+    color: #333333;
+    margin-right: 15px;
+    margin-top: 30px;
+    font-size: 25px;
+}
+.social-icons{
+    margin-top: 30px;
+
+}
+.social-icons a{
+    text-decoration: none;
+    font-size: 30px;
+    margin-top: 15px;
+    margin-right: 15px;
+    color: #333333;
+    display: inline-block;
+    transition: transform 0.5s;
+}
+.social-icons a:hover{
+    color:#ff004f;
+    transform: translateY(-5px);
+}
+.contact-right form input, textarea {
+    width: 500px;
+    display: block;
+    margin-bottom: 10px;
+    border: 0;
+    outline:none;
+    background:#333333;
+    padding: 20px;
+    margin: 15px 0;
+    color: white;
+    font-size: 14px; 
+    border-radius: 6px; 
+    }
+    .contact-right form button{
+        display: block;
+        margin-bottom: 10px;
+        border: 0;
+        outline:none;
+        background:#ff004f;
+        padding: 10px;
+        margin: 15px 200px;
+        color: white;
+        font-size: 18px;
+        border-radius: 6px;
+    }
+.contact-right form button:hover{
+
+box-shadow: 10px 10px 35px #ff004f;
+}
+#five:hover{
+    color: #ff004f;
+}
+
+#msg {
+    color:greenyellow;
+    margin-top: -10px;
+    margin-left: 150px;
+    display: block;
+}
+#resume{
+    display: inline-block;
+    padding: 10px 10px;
+    background-color:#ff004f;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 3px;
+    margin-top:20px;
+    cursor: pointer;
+}
+#resume:hover{
+    color:aqua;
+}
+
+/* .card{
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #fff;
+    padding: 10px;
+} */
+html {
+    scroll-behavior: smooth;
+}
+
+
+@media only screen and (max-width: 768px) {
+    nav {
+        padding: 10px;
+    }
+
+    nav ul li {
+        margin: 5px;
+    }
+
+    nav ul li a {
+        font-size: 12px;
+    }
+
+    nav .logo {
+        width: 50px;
+    }
+
+    nav .logo img {
+        margin: 5px 0 2px 2px;
+    }
+
+    #header-text {
+        padding: 100px 5%;
+    }
+
+    #header-text h1 {
+        font-size: 40px;
+    }
+
+    .about-col-1,
+    .about-col-2 {
+        flex-basis: 100%;
+        margin-left: -30%;
+        margin-top: 20px;
+    }
+
+    .about-col-1 img {
+        width: 85%;
+        margin-left:175px;
+        margin-top: -150px;
+    }
+
+    .about-col-2 p {
+        font-size: 16px;
+        margin-right: 35px;
+        
+    }
+
+    .sub-title {
+        font-size: 40px;
+    }
+
+    .tab-titles {
+        margin: 5px 0 10px;
+        font-size: 14px;
+    }
+
+    .tab-links {
+        font-size: 14px;
+        margin-right: 10%;
+    }
+
+    .pagination {
+        margin: 20px;
+    }
+
+    .prev-button,
+    .next-button {
+        margin: 20px;
+    }
+
+    #Intern img {
+        width: 100%;
+        margin: 10px;
+    }
+    .contact-left h1{
+        margin-left: 35px;
+    }
+
+    .contact-left,
+    .contact-right {
+        padding: 50px;
+        padding-left:110px;
+        margin: 0;
+    }
+
+    .contact-left h1 {
+        font-size: 24px;
+    }
+
+    .contact-left p {
+        margin-top: 15px;
+    }
+
+    .social-icons a {
+        font-size: 20px;
+        margin-top: 10px;
+        margin-right: 10px;
+    }
+    #resume{
+        margin-left: 20px;
+    }
+
+    .contact-right form input,
+    textarea {
+        width: 100%;
+    }
+
+    .contact-right form button {
+        margin: 0px 20px;
+        margin-left: 65px;
+    
+    }
+    #msg {
+        color:greenyellow;
+        margin-top: 20px;
+        margin-left:7px;
+        width: 100%;
+        display: block;
+    }
+}
+
+

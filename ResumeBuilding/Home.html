@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head id="start">
+    <meta charset="UTF-8">
+    <meta http-eqiv="X-UA-Compatable" content="IE=edge">
+    <meta name="viewport" content="width=device-width" , initial-scale="1.0">
+    <title>Documet</title>
+    <link rel="stylesheet" href="Style.css">
+    <title>AboutPage</title>
+    <title>ContactDetails</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+
+<body>
+    <div id="container">
+        <nav class="navbar">
+            <div class="logo">
+                <img src="Images/Logo.jpg" class="logo">
+            </div>
+            <div class="links">
+                <ul>
+                    <li> <a href="Home.html">Home</a></li>
+                    <li> <a href="#about" >About</a></li>
+                    <li> <a href="Intern.html">Certifications</a></li>
+                    <li> <a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+        <div id="header-text">
+            <p>Fresher with proper Skill-Set</p>
+            <h1>Hi, I am <span>Inamul</span> Hussen Shaik<br>recently graduted in 2023</h1>
+        </div>
+    </div>
+
+
+    <!--About-->
+
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="Images\whiteshirt.jpg">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me </h1>
+                    <p>"I am Inamul Hussen Shaik,. 2023 graduate with a B.Tech in Electronics and Communication
+                        Engineering. My skill set includes proficiency in Java, Python, C, and various database systems
+                        (SQL Server, MySQL, Oracle), along with web development technologies like HTML, CSS, and
+                        JavaScript. I'm passionate about technology and eager to contribute my skills and knowledge to
+                        innovative projects, constantly striving to learn and adapt in the ever-evolving tech landscape"
+                    </p>
+                    <div class="tab-titles">
+                        <p id="educ" class="tab-links active-link" onclick="opentab('education')">Education</p>
+                        <p id="skill" class="tab-links" onclick="opentab('skills')">Skills</p>
+                        <p id="proj" class="tab-links" onclick="opentab('projects')">Projects</p>
+                        <p id="cert" class="tab-links" onclick="opentab('certifications')">Certifications</p>
+                    </div>
+                    <div class="tab-contents Active-tab" id="education">
+                        <ul>
+                            <li><span class="head">Schooling (2016-17)</span><br>
+                                <p></p>ZPH School Madala<span class="CGPA"> CGPA 9.0</span>
+                            </li>
+                            <li><span class="head">Intermediate (2017-19)</span><br>SVKP Jr College<span class="CGPA">
+                                    CGPA 7.86</span></li>
+                            <li><span class="head">B.Tech (2019-23)</span><br>In the branch of Electronics &
+                                Communication Engineering<br>from Narasaraopeta Engineering College<span class="CGPA">
+                                    CGPA 7.8</span></li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="skills">
+                        <ul>
+                            <li id="skil1" style="background-color: darkgreen"><span class="head">Front End</span></li>
+                            <li id="skil1"><span class="head">HTML</span></li>
+                            <li id="skil1"><span class="head">CSS</span></li>
+                            <li id="skil1"><span class="head">JavaScript</span></li>
+                            <div>
+                                <li id="skil2" style="background-color: darkgreen"><span class="head">Back End</span></li>
+                                <li id="skil2"><span class="head">JAVA</span></li>
+                                <li id="skil2"><span class="head">Python</span></li>
+                                <li id="skil2"><span class="head">C</span></li>
+                            </div>
+                            <div>
+                                <li id="skil3" style=" background-color: darkgreen"><span class="head">Data Base</span></li>
+                                <li id="skil3"><span class="head">MySQL/SQLserver/Oracle</span></li>
+                            </div>
+                            
+                        </ul>
+                    </div>
+                    <!---Certificate-->
+                    <div class="tab-contents" id="certifications">
+                        <ul>
+
+                            <li><span class="head">CLICK-> <a id="zero" href="Intern.html" target="_blank">Web
+                                        Application development </a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="tab-contents" id="projects">
+                        <ul>
+
+                            <li><span class="head">Acadamic_Projects</span><span
+                                    id="minihead"><br>MiniProject</span><br>Finger Print Based Door Lock System<br><span
+                                    id="majorheaad">MajorProject</span><br>Epileleptic Seizure Detection Using SVM</li>
+                            <li><span class="head">Personal_Projects</span><br>The resposnsive E-Commerse Website using
+                                HTML, CSS & JS</li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+        function opentab(tabname) {
+            for (tablink of tablinks) {
+                tablink.classList.remove("active-link");
+            }
+            for (tabcontent of tabcontents) {
+                tabcontent.classList.remove("Active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("Active-tab")
+        }
+
+    </script>
+
+
+    <!--Contact-->
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p><i class="fa-solid fa-envelope"></i> inamulg786@gmail.com</p>
+                    <p><i class="fa-solid fa-phone"></i> +91 9014720483</p>
+                    <div class="social-icons">
+                        <a href="https://www.instagraam.com/enamul572001/"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/in/inamul-hussen-shaik-67735a275/"><i
+                                class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://github.com/InamulHussenShaik"><i class="fa-brands fa-github"></i></a>
+                    </div>
+                    <a id="resume" href="Images\Inamul_Hussen_Shaik.pdf" class="btn btn2">Download My Resume</a>
+                </div>
+                <div class="contact-right">
+                    <form name="submit-to-google-sheet">
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="text" name="email" placeholder="Your Email" required>
+                        <textarea name="message" rows="6" placeholder="Your message"></textarea>
+                        <button type="submit">Submit</button>
+                    </form>
+                    <span id="msg"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbxqyrojFvyH_y0dEzlcoUENv7IH6zlIbtRUwo7BSGtXkzDKRe4GEsbDkd-Sh6VEJVA/exec';
+        const form = document.forms['submit-to-google-sheet'];
+        const msg = document.getElementById("msg");
+    
+        form.addEventListener('submit', e => {
+            e.preventDefault();
+    
+            fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+                .then(response => {
+                    if (response.ok) {
+                        msg.innerHTML = "Message sent successfully";
+                        setTimeout(function () {
+                            msg.innerHTML = "";
+                        }, 6000);
+                        form.reset();
+                    } else {
+                        throw new Error('Failed to send message');
+                    }
+                })
+                .catch(error => {
+                    console.error('Error!', error.message);
+                    msg.innerHTML = "Error sending message. Please try again later.";
+                    setTimeout(function () {
+                        msg.innerHTML = "";
+                    }, 6000);
+                });
+        });
+    </script>
+    
+</body>
+
+</html>

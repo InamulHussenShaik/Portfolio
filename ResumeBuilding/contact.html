@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>ContactDetails</title>
+        <link rel="stylesheet" href="Style.css"> 
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    </head>
+    <body>
+        <div id="contact">
+            <div class="container">
+                <div class="row">
+                    <div class="contact-left">
+                        <h1 class="sub-title">Contact Me</h1>
+                        <p><i class="fa-solid fa-envelope"></i> inamul.hussen483@gmail.com</p>
+                        <p><i class="fa-solid fa-phone"></i> +91 9014720483</p>
+                        <div class="social-icons">
+                            <a href="https://www.instagraam.com/enamul572001/"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="https://www.linkedin.com/in/inamul-hussen-shaik-67735a275/"><i class="fa-brands fa-linkedin"></i></a>
+                            <a href="https://github.com/InamulHussenShaik"><i class="fa-brands fa-github"></i></a>
+                        </div>
+                        <a id="resume" href="Images\Inamul_Hussen_Shaik.pdf">Download My Resume</a>
+                    </div>
+                    <div class="contact-right">
+                        <form name="submit-to-google-sheet">
+                            <input type="text" name="Name" placeholder="Your Name" required>
+                            <input type="text" name="email" placeholder="Your Email" required>
+                            <textarea name="message" rows="6" placeholder="Your message"></textarea>
+                            <button type="submit">Submit</button>
+                        </form>
+                        <span id="msg"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="pagination">
+            <a href="About.html" class="prev-button">Previous</a>
+            <a href="Home.html" class="next-button">Home</a>
+          </div>
+        <script>
+            const scriptURL = 'https://script.google.com/macros/s/AKfycbxqyrojFvyH_y0dEzlcoUENv7IH6zlIbtRUwo7BSGtXkzDKRe4GEsbDkd-Sh6VEJVA/exec'
+            const form = document.forms['submit-to-google-sheet']
+            const msg = document.getElementById("msg")
+          
+            form.addEventListener('submit', e => {
+              e.preventDefault()
+              fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+                .then(response => {
+                    msg.innerHTML ="Message sent successfully"
+                    setTimeout(function(){
+                        msg.innerHTML = ""
+                    },6000)
+                    form.reset()
+                })
+                .catch(error => console.error('Error!', error.message))
+            })
+          </script>
+    </body>
+
+</html>
